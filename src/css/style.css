@@ -32,7 +32,6 @@ h5,
 h6 {
   font-weight: inherit;
   font-size: inherit;
-  text-align: right;
 }
 
 html,
@@ -42,6 +41,7 @@ body {
   font-family: "Rubik";
   font-weight: 300;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 textarea,
@@ -61,3 +61,190 @@ button {
 select {
   background-color: transparent;
 }
+
+/* General Start */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* General End */
+/* Promo Start */
+.promo {
+  background-color: yellow;
+}
+.promo__main {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  position: relative;
+}
+.promo__main::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  background: url("../images/promo/slots_machine.png") center/cover;
+  z-index: 0;
+  width: 512px;
+  height: 512px;
+}
+.promo__title {
+  position: relative;
+  font-size: 56px;
+  font-weight: 500;
+  z-index: 1;
+}
+.promo__descr {
+  position: relative;
+  z-index: 1;
+  margin-top: 32px;
+}
+.promo__btn {
+  margin-top: 32px;
+  text-transform: uppercase;
+  background: linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 247, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 400;
+}
+.promo img {
+  width: 200px;
+  height: auto;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.logo {
+  max-width: 200px;
+}
+.logo__img {
+  width: 100%;
+  height: auto;
+}
+
+.menu__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+
+/* Promo End */
+/* About Us Start */
+.about-us {
+  padding: 100px 0;
+  min-height: 200px;
+  background-color: rgba(0, 255, 247, 0.8);
+}
+.about-us__title {
+  color: #fef9f9;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.about-us__descr {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+/* About Us End */
+/* Games Start */
+.games {
+  padding: 100px 0;
+  min-height: 500px;
+  background-color: lemonchiffon;
+}
+.games__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.games__slide {
+  margin: 0 auto;
+  width: 60%;
+  overflow: clip;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(205, 205, 205, 0.3);
+  border-radius: 15px;
+  margin-bottom: 12px;
+}
+.games__slide-img {
+  max-width: 50%;
+  width: 100%;
+  height: 100%;
+}
+.games__slide-text {
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.games__slide-name {
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.games__slide-indicies span {
+  font-weight: 400;
+}
+.games__slide-descr {
+  -ms-flex-item-align: end;
+      align-self: end;
+}
+
+/* Games End */
+/* Contacts Start */
+.contacts {
+  padding: 100px 0;
+}
+.contacts__title {
+  font-size: 48px;
+  font-weight: 400;
+}
+.contacts__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* Contacts End */
+/* Footer Start */
+.footer {
+  background: lime;
+  padding: 8px 0;
+}
+.footer__text {
+  text-align: center;
+}
+
+/* Footer Endt */

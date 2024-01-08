@@ -1,1 +1,180 @@
 @import 'reset';
+
+/* General Start */
+.container {
+  max-width: 1200px;
+  // width: 100%;
+  margin: 0 auto;
+}
+/* General End */
+
+/* Promo Start */
+.promo {
+  background-color: yellow; 
+  &__main {
+    // height: 336px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    position: relative;
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content:'';
+      background: url('../images/promo/slots_machine.png') center / cover;
+      z-index: 0;
+      width: 512px;
+      height: 512px;
+    }
+  }
+  &__title {
+    position: relative;
+    font-size: 56px;
+    font-weight: 500;
+    z-index: 1;
+  }
+  &__descr {
+    position: relative;
+    z-index: 1;
+    margin-top: 32px;
+  }
+  &__btn {
+    margin-top: 32px;
+    text-transform: uppercase;
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0, 255, 247, 0.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 400;
+  }
+  img {
+    width: 200px;
+    height: auto;
+  }
+}
+
+.header {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.logo {
+  max-width: 200px;
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.menu {
+  &__items {
+    display: flex;
+    gap: 40px;
+  }
+}
+/* Promo End */
+
+/* About Us Start */
+.about-us {
+  padding: 100px 0;
+  min-height: 200px;
+  background-color: rgba(0, 255, 247, 0.8);
+  &__title {
+    color: #fef9f9;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+  &__descr {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.25;
+
+  }
+}
+/* About Us End */
+
+/* Games Start */
+.games {
+  padding: 100px 0;
+  min-height: 500px;
+  background-color: lemonchiffon;
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+  &__slide {
+    margin: 0 auto;
+    // height: 20vh;
+    width: 60%;
+    overflow: clip;
+    display: flex;
+    background-color: rgba(205, 205, 205, 0.3);
+    border-radius: 15px;
+    margin-bottom: 12px;
+    &-img {
+      // border-radius: 15% 0 0 15%;
+      max-width: 50%;
+      width: 100%;
+      height: 100%;
+    }
+    &-text {
+      padding: 8px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      // padding-top: 10px;
+      // padding-bottom: 16px;
+    }
+    &-name {
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    &-indicies {
+      span {
+        font-weight: 400;
+      }
+    }
+    &-descr {
+      align-self: end;
+      // line-height: 1.5;
+      // font-size: 18px;
+    }
+  }
+}
+/* Games End */
+
+/* Contacts Start */
+.contacts {
+  padding: 100px 0;
+  &__title {
+    font-size: 48px;
+    font-weight: 400;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+/* Contacts End */
+
+/* Footer Start */
+.footer {
+  background: lime;
+  padding: 8px 0;
+  &__text {
+    text-align: center;
+  }
+}
+/* Footer Endt */
