@@ -63,41 +63,176 @@ select {
 }
 
 /* General Start */
+:root {
+  --accent-color-black: #000;
+  --accent-color-white: #fff;
+}
+
 .container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
+body {
+  background: linear-gradient(315deg, rgb(101, 0, 94) 3%, rgb(60, 132, 206) 38%, rgb(239, 75, 75) 98%);
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.wave {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  -webkit-animation: wave 15s -3s linear infinite;
+          animation: wave 15s -3s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: -7em;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -7.25em;
+  animation: wave 23s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -7.5em;
+  animation: wave 25s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@-webkit-keyframes wave {
+  2% {
+    -webkit-transform: translateX(1);
+            transform: translateX(1);
+  }
+  25% {
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
+  }
+  50% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  75% {
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
+  }
+  100% {
+    -webkit-transform: translateX(1);
+            transform: translateX(1);
+  }
+}
+
+@keyframes wave {
+  2% {
+    -webkit-transform: translateX(1);
+            transform: translateX(1);
+  }
+  25% {
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
+  }
+  50% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  75% {
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
+  }
+  100% {
+    -webkit-transform: translateX(1);
+            transform: translateX(1);
+  }
+}
 /* General End */
 /* Promo Start */
 .promo {
-  background-color: yellow;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .promo__main {
   padding-top: 200px;
   padding-bottom: 200px;
   position: relative;
-}
-.promo__main::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  content: "";
-  background: url("../images/promo/slots_machine.png") center/cover;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   z-index: 0;
+  /* &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content:'';
+    background: url('../images/promo/slots_machine-2.png') center / cover;
+    z-index: 0;
+    width: 512px;
+    height: 512px;
+  } */
+}
+.promo__main span {
+  display: inline-block;
   width: 512px;
   height: 512px;
+  right: -3%;
+  top: 0;
+  z-index: 10;
+  position: absolute;
+  background: url("../images/promo/slots_machine-2.png") center/cover no-repeat;
 }
 .promo__title {
   position: relative;
   font-size: 56px;
   font-weight: 500;
   z-index: 1;
+  color: var(--accent-color-white);
+  -webkit-filter: brightness(200%) contrast(200%);
+          filter: brightness(200%) contrast(200%);
 }
 .promo__descr {
   position: relative;
   z-index: 1;
   margin-top: 32px;
+  color: var(--accent-color-white);
+  font-size: 20px;
+  -webkit-filter: brightness(200%) contrast(200%);
+          filter: brightness(200%) contrast(200%);
+  font-weight: 400;
 }
 .promo__btn {
   margin-top: 32px;
@@ -106,6 +241,7 @@ select {
   padding: 12px;
   border-radius: 8px;
   font-weight: 400;
+  color: var(--accent-color-white);
 }
 .promo img {
   width: 200px;
@@ -140,61 +276,77 @@ select {
   display: flex;
   gap: 40px;
 }
+.menu__item {
+  color: var(--accent-color-white);
+  text-transform: uppercase;
+  font-weight: 400;
+}
 
 /* Promo End */
 /* About Us Start */
 .about-us {
-  padding: 100px 0;
+  padding: 50px 0;
   min-height: 200px;
-  background-color: rgba(0, 255, 247, 0.8);
 }
 .about-us__title {
-  color: #fef9f9;
+  color: transparent;
+  background: linear-gradient(45deg, #14ffe9, #ffeb3b, #ff00e1);
+  -webkit-background-clip: text;
+          background-clip: text;
   text-align: center;
   text-transform: uppercase;
   font-size: 48px;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 24px;
 }
 .about-us__descr {
+  color: #ffffff;
   max-width: 750px;
   margin: 0 auto;
   text-align: center;
-  font-size: 18px;
-  line-height: 1.25;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 /* About Us End */
 /* Games Start */
 .games {
-  padding: 100px 0;
+  padding: 50px 0 100px;
   min-height: 500px;
-  background-color: lemonchiffon;
 }
 .games__title {
   text-align: center;
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
   text-transform: uppercase;
   font-size: 48px;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 24px;
 }
-.games__slide {
-  margin: 0 auto;
+.games__slider {
   width: 60%;
+  margin: 0 auto;
+}
+.games__slide-item {
+  margin: 0 auto;
   overflow: clip;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: rgba(205, 205, 205, 0.3);
-  border-radius: 15px;
+  border-radius: 16px;
   margin-bottom: 12px;
 }
-.games__slide-img {
+.games__slide-item-img {
   max-width: 50%;
   width: 100%;
   height: 100%;
 }
-.games__slide-text {
+.games__slide-item-text {
+  color: var(--accent-color-white);
   padding: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -207,14 +359,14 @@ select {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.games__slide-name {
+.games__slide-item-name {
   font-weight: 500;
   margin-bottom: 12px;
 }
-.games__slide-indicies span {
+.games__slide-item-indicies span {
   font-weight: 400;
 }
-.games__slide-descr {
+.games__slide-item-descr {
   -ms-flex-item-align: end;
       align-self: end;
 }
@@ -222,29 +374,129 @@ select {
 /* Games End */
 /* Contacts Start */
 .contacts {
+  padding-bottom: 100px;
+}
+.contacts .container {
+  position: relative;
+  z-index: -2;
+  border-radius: 12px;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#14ffe9), color-stop(#ffeb3b), to(#ff00e1));
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e1);
   padding: 100px 0;
 }
+.contacts .container span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -2;
+  -webkit-animation: rotate 5s infinite;
+          animation: rotate 5s infinite;
+  border-radius: 12px;
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+.contacts .container::before {
+  content: "";
+  position: absolute;
+  border-radius: 12px;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
+  background: linear-gradient(315deg, rgb(101, 0, 94) 3%, rgb(60, 132, 206) 38%, rgb(239, 75, 75) 98%);
+}
 .contacts__title {
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--accent-color-white);
   font-size: 48px;
-  font-weight: 400;
+  font-weight: 700;
+  margin-bottom: 24px;
 }
 .contacts__list {
+  position: relative;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 18px;
+}
+.contacts__item {
+  max-width: 312px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 24px 16px;
+  border-radius: 16px;
+}
+.contacts__person {
+  color: var(--accent-color-white);
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.contacts__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.contacts__email {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.contacts__descr {
+  text-align: center;
 }
 
 /* Contacts End */
 /* Footer Start */
 .footer {
-  background: lime;
-  padding: 8px 0;
+  padding: 0 0 16px 0;
 }
 .footer__text {
+  text-transform: uppercase;
   text-align: center;
+  font-weight: 700;
+  color: var(--accent-color-white);
+  text-shadow: 0 0 1px rgb(0, 0, 0);
+  font-size: 20px;
 }
 
-/* Footer Endt */
+/* Footer End */
