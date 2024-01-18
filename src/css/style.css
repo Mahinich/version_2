@@ -194,23 +194,13 @@ body {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 0;
-  /* &::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    content:'';
-    background: url('../images/promo/slots_machine-2.png') center / cover;
-    z-index: 0;
-    width: 512px;
-    height: 512px;
-  } */
 }
 .promo__main span {
   display: inline-block;
   width: 512px;
   height: 512px;
-  right: -3%;
-  top: 0;
+  right: -7%;
+  top: 5%;
   z-index: 10;
   position: absolute;
   background: url("../images/promo/slots_machine-2.png") center/cover no-repeat;
@@ -219,6 +209,7 @@ body {
   position: relative;
   font-size: 56px;
   font-weight: 500;
+  max-width: 60%;
   z-index: 1;
   color: var(--accent-color-white);
   -webkit-filter: brightness(200%) contrast(200%);
@@ -230,6 +221,7 @@ body {
   margin-top: 32px;
   color: var(--accent-color-white);
   font-size: 20px;
+  max-width: 60%;
   -webkit-filter: brightness(200%) contrast(200%);
           filter: brightness(200%) contrast(200%);
   font-weight: 400;
@@ -258,7 +250,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 12px;
+  padding-top: 24px;
   padding-bottom: 12px;
 }
 
@@ -346,29 +338,51 @@ body {
   height: 100%;
 }
 .games__slide-item-text {
+  width: 100%;
   color: var(--accent-color-white);
   padding: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
 }
 .games__slide-item-name {
   font-weight: 500;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  font-size: 36px;
+  letter-spacing: 4px;
+}
+.games__slide-item-indicies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 24px;
 }
 .games__slide-item-indicies span {
-  font-weight: 400;
+  font-weight: 500;
+  color: #e3e3e3;
+  text-shadow: 0px 0px 1px gray;
 }
 .games__slide-item-descr {
   -ms-flex-item-align: end;
       align-self: end;
+}
+.games__slide-item:first-child .games__slide-item-img {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
 }
 
 /* Games End */
@@ -459,9 +473,11 @@ body {
   border-radius: 16px;
 }
 .contacts__person {
-  color: var(--accent-color-white);
+  letter-spacing: 2px;
+  color: #e3e3e3;
   text-align: center;
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 20px;
   margin-bottom: 8px;
 }
 .contacts__item {
@@ -478,11 +494,14 @@ body {
 }
 .contacts__email {
   text-align: center;
-  color: #fff;
+  color: var(--accent-color-white);
   margin-bottom: 8px;
 }
 .contacts__descr {
   text-align: center;
+  color: var(--accent-color-white);
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 /* Contacts End */
